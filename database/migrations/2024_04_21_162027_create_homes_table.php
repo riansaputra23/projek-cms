@@ -13,10 +13,17 @@ return new class extends Migration
     {
         Schema::create('homes', function (Blueprint $table) {
             $table->id();
+            $table->string('title_1');
+            $table->string('title_2');
+            $table->string('title_3');
+            $table->string('button_left');
+            $table->string('button_right');
+            $table->string('about_me_title');
+            $table->string('about_me_description');
+            $table->string('image_path')->nllable();
             $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      */
